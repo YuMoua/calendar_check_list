@@ -12,9 +12,11 @@
 
 $(function () {
 
+  // this code will allow the written text within the event to be saved even when refreshed.
+
   let saveButtonEl = $('saveBtn')
   saveButtonEl.addEventListener = ('click', function() {
-    // need to add a save feature
+    // need to add the code to save the written text even when the page is refreshed.
   });
 
 
@@ -24,6 +26,24 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+
+  
+// this code counts the hour so that the previous to do list colors will be different
+//  depending on past, present, and future
+  // function calendarColorPast() {
+  //   let time = dayjs().format('HH')
+  //   console.log(time);
+  //   if (time > 1) {
+  //     let hour1 = $('#hour-1');
+  //     if (hour1.classList.contains('future')) {
+  //       hour1.classList.remove('future');
+  //       hour1.classList.add('past')
+  //     }
+  //   }
+  // };
+
+  // calendarColorPast();
+  // setInterval(calendarColor, 1000)
 
 
 
@@ -37,6 +57,8 @@ $(function () {
 
   //
   // TODO: Add code to display the current date in the header of the page.
+
+  // this code will put the current date into the html file.
 let currentDate = $('#currentDay');
 
   function displayDate() {
@@ -45,7 +67,9 @@ let currentDate = $('#currentDay');
 
   }
 
+  // this code will activate the date call function.
 displayDate();
+// this code will make it so that the display date will be refreshed every second.
 setInterval(displayDate, 1000);
 
 })
